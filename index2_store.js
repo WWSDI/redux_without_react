@@ -49,4 +49,13 @@ store.dispatch(increment())
 store.dispatch(increment())
 store.dispatch(add(5));
 
+
+// ⭐️ Bind individual action creators
+// The output, actions, is an object with the same keys, but with every action creator function wrapped into a dispatch call so they may be invoked directly.
+const actions = bindActionCreators({ increment, add }, store.dispatch)
+actions.add(100)
+actions.increment()
+
+
+
 console.log(store);
