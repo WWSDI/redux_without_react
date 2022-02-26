@@ -16,6 +16,7 @@ console.log("without compose 1:", louderRepeatEmbolden1("shawn"));
 console.log("without compose 2:", louderRepeatEmbolden2("shawn"));
 
 // This is done using compose from Redux
+// compose is essentially the same as Ramda.compose
 const louderRepeatEmbolden3_redux = compose(
   embolden,
   repeatThreeTimes,
